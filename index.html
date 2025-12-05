@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Lab 1" content="Assignment 1 portfolio" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <!--Navigation bar linking to sections of the page and one external page-->
+      <a href="#heading1" class="navlink">About me</a>
+      <a href="#heading2" class="navlink">Biography</a>
+      <a href="#heading3" class="navlink">Interests</a>
+      <a href="#heading4" class="navlink">Goals</a>
+      <a href="#heading5" class="navlink">Contact</a>
+      <a href="https://www.linkedin.com/" target="_blank" class="navlink"
+        >Connect with me</a
+      >
+    </nav>
+
+    <!--Header of website with the main title-->
+    <header id="header">
+      <h1>Nellies portfolio</h1>
+    </header>
+
+    <main id="main">
+      <!--First section-->
+
+      <section class="content">
+        <!--Container for all content in the section, used to get column direction-->
+        <div class="text">
+          <!--Container for all content inside the section, used to get row direction-->
+          <img
+            src="img/me.jpg"
+            alt="picture of a girl in workout clothes taken with phone in mirror"
+            width="300"
+            height="400"
+          />
+          <div id="abouttext">
+            <!--Group of h2 and p tag for styling h2 on top of text-->
+            <h2 id="heading1">Hello, my name is Nellie!</h2>
+            <p>
+              I'm a hands on UX-designer who loves exploring how people think,
+              feel and interact with digital experiences. I enjoy turnning
+              complex problems infor clear and intuitive solutions, as well as
+              experimenting with ideas that make products feel enjoyable and
+              engaging, and also looks good. I like to learn new things with
+              pototyping, reseraching and everything in between.
+            </p>
+          </div>
+          <!--End of #abouttext-->
+        </div>
+        <!--End of .text-->
+      </section>
+
+      <!--Second section-->
+      <div class="background">
+        <!--Class attribute to set background around this section-->
+        <section class="content">
+          <!--Container for all content in the section, used to get column direction-->
+          <h2 id="heading2">Biography</h2>
+          <div class="text">
+            <!--Container for all content inside the section, used to get row direction-->
+            <p>
+              When I was younger I lived in Skåne. There I studied animal health
+              care. I chose this major as I have always had an interest and
+              compassion for animals. I remember that I as a child always wanted
+              to be around animals and was sad that my brother was allergic to
+              fur animals, and was very jealous of friends and family members
+              who had pets. My plan after Gymnasiet was to continue with animal
+              related studies, such as veterinary medicine or animal welfare
+              inspector. However, this meant I had to move to a city that I did
+              not want to move to so after a lot of consideration I decided to
+              start my IT journey as a interaction designer. I am currently
+              studying my third, and last year, as an interaction designer at
+              Linneus University in Kalmar. I found my interets for this program
+              becuase of my boyfriend. When we met he was studying the same
+              thing, and i was originally planning on studying economics. After
+              seeing what my boyfriend did I was intrigued and started looking
+              into the program myself. I found it very interesting and decided
+              to apply.
+            </p>
+            <img
+              src="img/cows.jpg"
+              alt="picture of cows in enclosed stable"
+              width="200"
+              height="300"
+            />
+          </div>
+          <!--End of .text"-->
+        </section>
+      </div>
+      <!--End of .background-->
+
+      <!--Third section-->
+      <section class="content">
+        <!--Container for all content in the section, used to get column direction-->
+        <h2 id="heading3">Interests</h2>
+        <p class="text">
+          <!--Class attribute to get row direction, no div to get list in middle-->
+          During my free time I enjoy working out and being active. I like going
+          on walks and going to the gym to do
+        </p>
+        <ul>
+          <!--Unordered list-->
+          <li>strength training</li>
+          <li>cardio</li>
+          <li>pilates</li>
+        </ul>
+        <p class="text">
+          <!--Continuation of text and class attribute-->
+          I also enjoy second hand shopping and going to thrift stores to find
+          unique clothes and accessories. My new found hobby is crocheing. I
+          find this very relaxing and rewarding as it gived me something
+          meaningful to do as well as getting fun stuff to wear and use
+          afterwards. I like the feeling of knowing I made it myself.
+        </p>
+      </section>
+
+      <!--Fourth section-->
+      <div class="background">
+        <!--Class attribute to set background around this section-->
+        <section class="content">
+          <!--Container for all content in the section, used to get column direction-->
+          <h2 id="heading4">Goals</h2>
+          <div class="text">
+            <!--Container for all content inside the section, used to get row direction-->
+            <p>
+              My short term goal is to finish my studies and get my degree as an
+              interaction designer. After that I would like to get a job within
+              the field. I would like to work at a company with a sustainability
+              focus. I would like my future working place to have a good work
+              environment where I can learn and grow as a designer. A good
+              workplace is important to me cause I want to feel good about
+              coming to work everyday and working with my colleagues.
+            </p>
+            <table>
+              <!--Table with two columns and two rows-->
+              <tr>
+                <!--Table row-->
+                <th>Short term</th>
+                <!--Table header-->
+                <th>Long term</th>
+                <!--Table header-->
+              </tr>
+              <tr>
+                <!--Table row-->
+                <td>Finish degree</td>
+                <!--Table cell-->
+                <td>Get a job</td>
+                <!--Table cell-->
+              </tr>
+            </table>
+          </div>
+          <!--End of .text-->
+        </section>
+      </div>
+      <!--End of .background-->
+
+      <!--FIFTH-->
+      <section class="content">
+        <h2 id="heading5">Contact me</h2>
+
+        <form action="mailto:nf222jd@student.lnu.se" method="post" id="form">
+          <!--Form with mail to funtion-->
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email adress</label>
+          <input type="text" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea name="test" id="message"></textarea>
+          <input type="submit" value="Send" id="submit" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div id="info">
+        <!--Container for contact info-->
+        <h2>Come in contact me</h2>
+        <p>Emailadress@mail.com</p>
+        <p>070 123 45 67</p>
+
+        <h3>Connect with me:</h3>
+        <!--Heading for Linkedin link-->
+        <a href="https://www.linkedin.com/" target="_blank" id="linkedin">
+          <img
+            src="img/linkedin.png"
+            alt="linked in logo"
+            width="32"
+            height="32"
+          />
+          <!--Image tag with my own created png-->
+        </a>
+      </div>
+      <p id="copyright"><u>Privacy terms</u> © 2025 - All rights reserved</p>
+    </footer>
+  </body>
+</html>

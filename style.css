@@ -1,0 +1,214 @@
+/*Basic page layout*/
+
+body {
+  background-color: rgb(250, 245, 239);
+  margin: 0 auto; /*Removes space around the page, centers content on big screen*/
+  max-width: 1500px; /*Prevents content to spread to wide*/
+}
+
+html {
+  scroll-behavior: smooth; /*Smooth scrolling when using anchor links*/
+}
+
+/*Heading and text styling*/
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-family: garamond, serif;
+}
+
+/*Centering header*/
+#header {
+  text-align: center;
+}
+
+/*Navigation bar styling*/
+
+nav {
+  background-color: rgb(200, 180, 150);
+  font-size: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row; /*Aligning links in one line*/
+  justify-content: flex-end; /*Aligning links to the righ*/
+  gap: 20px;
+
+  position: sticky; /*Keeps navbar visbale when scrolling*/
+  top: 0;
+  width: 100%;
+  box-sizing: border-box; /*Width 100% no matter the padding */
+}
+
+.navlink {
+  text-decoration: none; /*Removes underline on links*/
+  color: white;
+}
+
+.navlink:hover {
+  color: rgb(165, 42, 42); /*Makes text change colour when hovering*/
+}
+
+/*Main content*/
+
+#main {
+  margin-bottom: 100px; /*More space between main content and footer*/
+}
+
+/*Sections with class="background have a different colour background*/
+.background {
+  background-color: rgb(222, 208, 189);
+}
+
+/*Flex container for all sections*/
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+/*Flex container for text and image/table groups. */
+.text {
+  display: flex;
+  flex-direction: row; /*Positions text and image/tabel side by side*/
+  align-items: center;
+  max-width: 100ch; /*Max width in amount of characters*/
+  gap: 20px;
+}
+
+/*List styling*/
+
+ul li {
+  font-family: garamond, serif;
+  margin-bottom: 4px; /*Space between list items*/
+}
+
+/*Table styling*/
+
+table,
+th,
+td {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px; /*Rounded edges*/
+  padding: 12px;
+}
+
+/*Form styling*/
+
+#form {
+  display: flex;
+  flex-direction: column; /*Positions input boxes below each other*/
+  gap: 16px;
+  width: 800px;
+
+  /*Visual styling*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*Shadow on form*/
+  padding: 24px;
+  border-radius: 10px;
+}
+
+#form label {
+  font-weight: bold;
+}
+
+#form input,
+#form textarea {
+  padding: 8px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 8px;
+}
+
+#form #message {
+  height: 120px;
+  resize: vertical; /*Allows resizing vertically (downwards)*/
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+}
+
+/*Styling submit button*/
+#form input[type="submit"] {
+  background-color: rgb(200, 180, 150);
+  color: white;
+  border: none;
+  cursor: pointer; /*Changes cursor to pointer to show that it's a button*/
+  border-radius: 16px;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(236, 236, 236); /*Changes colour when wrting in each box*/
+}
+
+#form #submit:hover { 
+  background-color: rgb(165, 42, 42); /*Changes colour on button when hovering */
+}
+
+/*Footer*/
+
+footer { /*Entire footer styling*/
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(200, 180, 150);
+}
+
+footer #copyright { /*Only copyright text styling*/
+  text-align: right;
+  margin: 0px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+
+footer #info { /*Contact info styling*/
+  padding-top: 8px;
+  text-align: center;
+}
+
+#linkedin:hover { /*Putting a grayscale filter on top of image when hovering*/
+  filter: grayscale(100%);
+}
+
+/*Responsive design*/
+
+@media (max-width: 800px) {
+  .text {
+    flex-direction: column; /*Stacks image on top of text on smaller screens */
+    padding-right: 0;
+    max-width: 60ch; /*Less characters in width on smaller screens*/
+  }
+
+  .text img {
+    width: 70%; /*Makes image smaller*/
+    height: auto; /*Height changes proprtinally to width on smaller screens*/
+  }
+
+  #form {
+    width: 400px;
+  }
+
+  nav {
+    font-size: 16px;
+    justify-content: center; /*Centers nav links on smaller screens*/
+  }
+
+  footer #copyright {
+    display: flex;
+    flex-direction: column; /*Stacks text within copyright container on smaller screens*/
+    gap: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    gap: 12px;
+  }
+
+  .text img {
+    width: 50%;
+    height: auto;
+  }
+}
