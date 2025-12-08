@@ -35,8 +35,7 @@ nav {
 
   display: flex;
   flex-direction: row; /*Aligning links in one line*/
-  justify-content: flex-end; /*Aligning links to the righ*/
-  gap: 20px;
+  justify-content: flex-end; /*Aligning links to the right*/
 
   position: sticky; /*Keeps navbar visbale when scrolling*/
   top: 0;
@@ -51,6 +50,26 @@ nav {
 
 .navlink:hover {
   color: rgb(165, 42, 42); /*Makes text change colour when hovering*/
+}
+
+/* For gap between nav links */
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navToggle {
+  display: none; /*Hides checkbox*/
+}
+
+/* Hamurger button, hidden on desktop, showm on smaller screens */
+.hamburger {
+  display: none; /*Hides hamburger button*/
+  font-size: 28px;
+  background: none; /*Removes button background*/
+  border: none; /*Removes button border*/
+  cursor: pointer;
+  color: white;
 }
 
 /*Main content*/
@@ -141,34 +160,46 @@ td {
 
 input:focus,
 textarea:focus {
-  background-color: rgb(236, 236, 236); /*Changes colour when wrting in each box*/
+  background-color: rgb(
+    236,
+    236,
+    236
+  ); /*Changes colour when wrting in each box*/
 }
 
-#form #submit:hover { 
-  background-color: rgb(165, 42, 42); /*Changes colour on button when hovering */
+#form #submit:hover {
+  background-color: rgb(
+    165,
+    42,
+    42
+  ); /*Changes colour on button when hovering */
 }
 
 /*Footer*/
 
-footer { /*Entire footer styling*/
+footer {
+  /*Entire footer styling*/
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(200, 180, 150);
 }
 
-footer #copyright { /*Only copyright text styling*/
+footer #copyright {
+  /*Only copyright text styling*/
   text-align: right;
   margin: 0px;
   padding-right: 8px;
   padding-bottom: 8px;
 }
 
-footer #info { /*Contact info styling*/
+footer #info {
+  /*Contact info styling*/
   padding-top: 8px;
   text-align: center;
 }
 
-#linkedin:hover { /*Putting a grayscale filter on top of image when hovering*/
+#linkedin:hover {
+  /*Putting a grayscale filter on top of image when hovering*/
   filter: grayscale(100%);
 }
 
@@ -191,8 +222,31 @@ footer #info { /*Contact info styling*/
   }
 
   nav {
-    font-size: 16px;
+    font-size: 20px;
     justify-content: center; /*Centers nav links on smaller screens*/
+  }
+
+  .hamburger {
+    display: block; /*Shows hamburger button on smaller screens*/
+    margin-left: auto; /*Aligns hamburger button to the right*/
+  }
+
+  .navLinks {
+    display: none; /*Hides nav links on smaller screens*/
+    width: 100%;
+    flex-direction: column; /*Stacks links vertically*/
+    align-items: center; /*Aligns link in the center of the ham.menu*/
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap; /*Keeps the menu icon on the side right side of the page when clicked*/
+  }
+
+  /* When checkbox is checkes, display  the menu  */
+  .navToggle:checked + .hamburger + .navLinks {
+    display: flex;
   }
 
   footer #copyright {

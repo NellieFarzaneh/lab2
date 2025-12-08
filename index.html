@@ -9,15 +9,23 @@
 
   <body>
     <nav>
-      <!--Navigation bar linking to sections of the page and one external page-->
-      <a href="#heading1" class="navlink">About me</a>
-      <a href="#heading2" class="navlink">Biography</a>
-      <a href="#heading3" class="navlink">Interests</a>
-      <a href="#heading4" class="navlink">Goals</a>
-      <a href="#heading5" class="navlink">Contact</a>
-      <a href="https://www.linkedin.com/" target="_blank" class="navlink"
-        >Connect with me</a
-      >
+      <input type="checkbox" id="navToggle" class="navToggle" />
+      <!--Checkbox for hamburger menu-->
+      <label for="navToggle" class="hamburger" aria-label="Open menu"> ☰</label>
+      <!--Label for hamburger menu button-->
+
+      <div class="navLinks">
+        <!--Container for all nav links-->
+        <a href="#heading1" class="navlink">About me</a>
+        <a href="#heading2" class="navlink">Biography</a>
+        <a href="#heading3" class="navlink">Interests</a>
+        <a href="#heading4" class="navlink">Goals</a>
+        <a href="#heading5" class="navlink">Contact</a>
+        <a href="https://www.linkedin.com/" target="_blank" class="navlink"
+          >Connect with me</a
+        >
+      </div>
+      <!--End of .navLinks-->
     </nav>
 
     <!--Header of website with the main title-->
