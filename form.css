@@ -1,6 +1,5 @@
 /*Form styling*/
 
-
 #contactForm {
   display: flex;
   flex-direction: column; /*Positions input boxes below each other*/
@@ -24,22 +23,37 @@
   padding: 8px;
 }
 
-/*Styling submit button*/
+/*Styling buttons*/
 #contactForm input[type="submit"] {
-  background-color: rgb(200, 180, 150);
-  color: white;
-  border: none;
-  cursor: pointer; /*Changes cursor to pointer to show that it's a button*/
-  border-radius: 16px;
+    background-color: rgb(200, 180, 150);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 4px; /*space between buttons*/
+}
+
+#resetBtn {
+    background-color: rgb(206, 206, 206);
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 12px;
 }
 
 #contactForm #submit:hover {
-  background-color: rgb(
-    165,
-    42,
-    42
-  ); 
+  background-color: rgb(165,42,42); 
 } /*Changes colour on button when hovering */
+
+#resetBtn:hover {
+  background-color: rgb(165,42,42); 
+  color: white;
+} /*Changes colour on button when hovering */
+
 
 #contactForm input,
 #contactForm textarea,
@@ -78,14 +92,29 @@
     opacity: 1;
 }
 
+
+
+
+
+
+
+
 /* Media query, responsive design */
 @media (max-width: 800px) {
 
 #contactForm {
-    width: 400px;
+    width: 500px;
   }
 }
 
+@media (max-width: 600px) {
+#contactForm {
+    width: 350px;
+  }
+}
+
+
+/*BOTTOM OR IT WONT SHOW*/
 /* classes for js */
 /* Green border when the field is correctly filled*/
 /* !important or the border doesnt show */
