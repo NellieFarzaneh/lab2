@@ -5,7 +5,7 @@
     <meta name="Lab 1" content="Assignment 1 portfolio" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="form.css" />
   </head>
 
   <body>
@@ -173,49 +173,55 @@
         <h2 id="heading5">Contact me</h2>
 
         <form id="contactForm">
+          <div class="nameRow">
             <!-- First name -->
-          <label for="firstName">First name</label>
-          <input type="text" id="firstName" name="firstName"/>
-          <p class="errorMsg" id="firstNameError"></p>
+             <div class="nameField">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" />
+            <p class="errorMsg" id="firstNameError"></p>
+            </div> <!--end of nameField-->
 
-          <!-- Last name -->
-          <label for="lastName">Last name</label>
-          <input type="text" id="lastName" name="lastName"/>
-          <p class="errorMsg" id="lastNameError"></p>
+
+            <!-- Last name -->
+            <div class="nameField">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" />
+            <p class="errorMsg" id="lastNameError"></p>
+            </div> <!--end of nameField-->
+          </div> <!-- end of nameRow  -->
 
           <!-- Email -->
           <label for="email">Email address</label>
-          <input type="text" id="email" name="email"/>
+          <input type="text" id="email" name="email" />
           <p class="errorMsg" id="emailError"></p>
 
           <!-- Subject dropdown -->
           <label for="subject">Subject</label>
           <select id="subject" name="subject">
-          <option value="">-- Choose a subject --</option>
-          <option value="general">General question</option>
-          <option value="project">Project</option>
-          <option value="other">Other</option>
+            <option value="">-- Choose a subject --</option>
+            <option value="general">General question</option>
+            <option value="project">Project</option>
+            <option value="other">Other</option>
           </select>
           <p class="errorMsg" id="subjectError"></p>
 
           <!-- Message -->
           <label for="message">Message</label>
-          <textarea id="message" name="message" ></textarea>
+          <textarea id="message" name="message"></textarea>
 
           <!-- Character counter -->
-          <div id="charCounter"> 0/20 characters</div>
+          <div id="charCounter">0/20 characters</div>
           <p class="errorMsg" id="messageError"></p>
 
-
           <!-- Buttons -->
-           <div class="buttonRow">
-          <input type="submit" value="Send" id="submit" />
-          <button type="button" id="resetBtn">Clear</button>
+          <div class="buttonRow">
+            <input type="submit" value="Send" id="submit" />
+            <button type="button" id="resetBtn">Clear</button>
           </div>
         </form>
 
         <!-- Success message -->
-         <p id="successMsg"></p>
+        <p id="successMsg"></p>
       </section>
     </main>
 
