@@ -1,5 +1,6 @@
 /*Form styling*/
 
+
 #contactForm {
   display: flex;
   flex-direction: column; /*Positions input boxes below each other*/
@@ -14,13 +15,6 @@
 
 #contactForm label {
   font-weight: bold;
-}
-
-#contactForm input,
-#contactForm textarea {
-  padding: 8px;
-  border: 1px solid rgb(217, 217, 217);
-  border-radius: 8px;
 }
 
 #contactForm #message {
@@ -39,27 +33,20 @@
   border-radius: 16px;
 }
 
-#contactForm input:focus,
-#contactForm textarea:focus {
-  background-color: rgb(
-    236,
-    236,
-    236
-  ); /*Changes colour when wrting in each box*/
-}
-
 #contactForm #submit:hover {
   background-color: rgb(
     165,
     42,
     42
-  ); /*Changes colour on button when hovering */
+  ); 
+} /*Changes colour on button when hovering */
+
+#contactForm input,
+#contactForm textarea {
+  padding: 8px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 8px;
 }
-
-
-
-
-
 
 /* Media query, responsive design */
 @media (max-width: 800px) {
@@ -69,3 +56,9 @@
   }
 }
 
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border: 3px solid blue;
+  background-color: rgb(236, 236, 236);
+} 
+/* changing colour and border colour when field is chosen */
