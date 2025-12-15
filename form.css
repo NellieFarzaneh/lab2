@@ -55,7 +55,6 @@
 .errorMsg {
     color: #dc3545; /*red error text*/
     font-size: 12px; /*smaller text*/
-    height: 8px;  /*Reserves space even when empty*/
     opacity: 1; /*visable when active*/
     transition: opacity 0.2s ease; /*smoothe fade in/out*/
 }
@@ -79,6 +78,26 @@
     opacity: 1;
 }
 
+/* Media query, responsive design */
+@media (max-width: 800px) {
+
+#contactForm {
+    width: 400px;
+  }
+}
+
+/* classes for js */
+/* Green border when the field is correctly filled*/
+/* !important or the border doesnt show */
+.valid {
+    border: 2px solid #28a745 !important;
+}
+
+
+/* Red border when the field is invalid */
+.error {
+    border: 2px solid #dc3545 !important;
+}
 
 /* Changing colour and border colour when field is chosen */
 #contactForm input:focus,
@@ -87,10 +106,3 @@
   background-color: rgb(236, 236, 236);
 } 
 
-/* Media query, responsive design */
-@media (max-width: 800px) {
-
-#contactForm {
-    width: 400px;
-  }
-}
