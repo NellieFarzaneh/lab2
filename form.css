@@ -1,0 +1,71 @@
+/*Form styling*/
+
+#contactForm {
+  display: flex;
+  flex-direction: column; /*Positions input boxes below each other*/
+  gap: 16px;
+  width: 800px;
+
+  /*Visual styling*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*Shadow on form*/
+  padding: 24px;
+  border-radius: 10px;
+}
+
+#contactForm label {
+  font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 8px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 8px;
+}
+
+#contactForm #message {
+  height: 120px;
+  resize: vertical; /*Allows resizing vertically (downwards)*/
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+}
+
+/*Styling submit button*/
+#contactForm input[type="submit"] {
+  background-color: rgb(200, 180, 150);
+  color: white;
+  border: none;
+  cursor: pointer; /*Changes cursor to pointer to show that it's a button*/
+  border-radius: 16px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  background-color: rgb(
+    236,
+    236,
+    236
+  ); /*Changes colour when wrting in each box*/
+}
+
+#contactForm #submit:hover {
+  background-color: rgb(
+    165,
+    42,
+    42
+  ); /*Changes colour on button when hovering */
+}
+
+
+
+
+
+
+/* Media query, responsive design */
+@media (max-width: 800px) {
+
+#contactForm {
+    width: 400px;
+  }
+}
+
