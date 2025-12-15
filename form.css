@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column; /*Positions input boxes below each other*/
   gap: 16px;
-  width: 800px;
+  width: 700px;
 
   /*Visual styling*/
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*Shadow on form*/
@@ -92,25 +92,38 @@
     opacity: 1;
 }
 
+/*Put first name and last name beside eachother on desktop*/
+.nameRow {
+    display: flex;
+    gap: 16px;
+}
 
-
-
-
+.nameField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
 /* Media query, responsive design */
 @media (max-width: 800px) {
-
 #contactForm {
     width: 500px;
   }
+
+.nameRow {
+    flex-direction: column; 
+/*put first name and last name over eachother on smaller screens*/
+}
 }
 
 @media (max-width: 600px) {
 #contactForm {
     width: 350px;
   }
+
+
 }
 
 
