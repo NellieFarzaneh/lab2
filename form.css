@@ -42,11 +42,50 @@
 } /*Changes colour on button when hovering */
 
 #contactForm input,
-#contactForm textarea {
+#contactForm textarea,
+#contactForm select {
   padding: 8px;
   border: 1px solid rgb(217, 217, 217);
   border-radius: 8px;
 }
+
+/* Error message styling */
+
+/* Styling for the error text displayed under the inputs */
+.errorMsg {
+    color: #dc3545; /*red error text*/
+    font-size: 12px; /*smaller text*/
+    height: 8px;  /*Reserves space even when empty*/
+    opacity: 1; /*visable when active*/
+    transition: opacity 0.2s ease; /*smoothe fade in/out*/
+}
+
+/* Hidden state of the error message */
+.errorMsg.hidden {
+    opacity: 0; /*makes the test invisable but keeps the space*/
+}
+
+/* Success message */
+#successMsg {
+    color: #28a745; /*green success text*/
+    font-weight: bold; /*bold styling*/
+    margin-top: 16px;
+    opacity: 0; /*hidden by default*/
+    transition: opacity 0.3s ease; /*smoothe fade animation*/
+}
+
+/* Visable state for the success message */
+#successMsg.show{
+    opacity: 1;
+}
+
+
+/* Changing colour and border colour when field is chosen */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border: 3px solid rgb(0, 60, 255);
+  background-color: rgb(236, 236, 236);
+} 
 
 /* Media query, responsive design */
 @media (max-width: 800px) {
@@ -55,10 +94,3 @@
     width: 400px;
   }
 }
-
-#contactForm input:focus,
-#contactForm textarea:focus {
-  border: 3px solid blue;
-  background-color: rgb(236, 236, 236);
-} 
-/* changing colour and border colour when field is chosen */
