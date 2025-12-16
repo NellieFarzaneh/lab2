@@ -43,3 +43,34 @@ function clearError(input, errorElement) { //takes input = input field and error
   errorElement.classList.add("hidden"); //hides errormessage 
 }
 
+//Validate inputs
+
+//Validate name
+function validateName(input, errorElement, fieldLabel) {
+  const value = input.value.trim()
+
+  if (value === "") {
+    showError(input, errorElement, `${fieldLabel} is required`)
+    return false
+  }
+
+  if (!/^[A-Za-z]+$/.test(value)) {
+    showError(input, errorElement, "Only letters allowed")
+    return false
+  }
+
+  input.classList.remove("error")
+  clearError(input, errorElement)
+  input.classlist.add("valid")
+  return true
+
+}
+
+firstName.addEventListener("input", () => {
+  validateName(firstName, firstNameError, "First name")
+})
+
+lastName.addEventListener("input", () => {
+  validateName(lastName, lastNameError, "Last name")
+})
+
