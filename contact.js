@@ -93,11 +93,11 @@ function validateEmail() {
   }
 
   //check if field has @
-  if (!value.includes("@")) {
+  if (!value.includes("@") || !value.includes(".")) {
     showError(email, emailError, "Enter valid email")
     return false
   }
-  
+
   //if email is valid
   email.classList.remove("error")
   clearError(email, emailError)
@@ -172,3 +172,8 @@ function clearForm() {
 
 //clearForm runs whenuser clicks "clear" button
 resetBtn.addEventListener("click", clearForm)
+
+  
+  
+  
+  
