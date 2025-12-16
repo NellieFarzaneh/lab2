@@ -79,3 +79,27 @@ firstName.addEventListener("input", function () {
 lastName.addEventListener("input", function() {
   validateName(lastName, lastNameError, "Last name")
 })
+
+//Validate email 
+function validateEmail () {
+  const value = email.value.trim()
+
+  //check if email field if empty
+  if (value === "") {
+    showError(email, emailError, "Email is required")
+    return false
+  }
+
+  //check if field has @
+  if (!value.includes(@)) {
+    showError(email, emailError, "Enter valid email")
+    return false
+}
+   //if email is valid 
+    email.classList.remove("error")
+    clearError(email, emailError)
+    email.classList.add("valid")
+    return ture
+
+    //validate email while typing
+    email.addEventListener("input", validateEmail)
