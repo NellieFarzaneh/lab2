@@ -27,3 +27,12 @@ const successMsg = document.getElementById("successMsg");
 
 //-------------------------------------------------------------------
 
+//Show error - mark input as wrong and show red error message
+function showError(input, errorElement, message) { //input = input field, errorElemet = input field errormessage, message = the text that gonna be shown
+  input.classList.remove("valid"); //removes green border
+  input.classList.add("error"); //adds red border
+
+  errorElement.textContent = message; //adds error message
+  errorElement.classList.remove("hidden"); //shows messsage beneath inputfield
+}
+
