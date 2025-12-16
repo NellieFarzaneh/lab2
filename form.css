@@ -105,7 +105,6 @@
 }
 
 
-
 /* Media query, responsive design */
 @media (max-width: 800px) {
 #contactForm {
@@ -147,4 +146,3 @@
   border: 3px solid rgb(0, 60, 255);
   background-color: rgb(236, 236, 236);
 } 
-

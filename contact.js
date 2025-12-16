@@ -1,5 +1,6 @@
 // Get id:s from html file
 
+//Entire form
 const contactForm = document.getElementById("contactForm");
 
 // Input fields
@@ -28,7 +29,8 @@ const successMsg = document.getElementById("successMsg");
 //-------------------------------------------------------------------
 
 //Show error - mark input as wrong and show red error message
-function showError(input, errorElement, message) { //input = input field, errorElemet = input field errormessage, message = the text that gonna be shown
+function showError(input, errorElement, message) { //takes into account these 3 values input, erroreElement, message
+  //input = input field, errorElemet = input field errormessage, message = the text that gonna be shown
   input.classList.remove("valid"); //removes green border
   input.classList.add("error"); //adds red border
 
@@ -36,41 +38,44 @@ function showError(input, errorElement, message) { //input = input field, errorE
   errorElement.classList.remove("hidden"); //shows messsage beneath inputfield
 }
 
-//Clear error - field is okay, remove errors 
-function clearError(input, errorElement) { //takes input = input field and errorElement = error message
+//Clear error - field is okay, remove errors
+function clearError(input, errorElement) {
+  //takes input = input field and errorElement = error message
   input.classList.remove("error"); //removes red border
-  errorElement.textContent = ""; //removed text
-  errorElement.classList.add("hidden"); //hides errormessage 
+  errorElement.textContent = ""; //remove text
+  errorElement.classList.add("hidden"); //hides errormessage
 }
 
-//Validate inputs
+//Validate functions 
 
-//Validate name
-function validateName(input, errorElement, fieldLabel) {
-  const value = input.value.trim()
+//Validate name - for both first and last name
+function validateName(input, errorElement, fieldLabel) { // takes into account these 3 values - input, errorElement, fieldLabel
+  const value = input.value.trim(); //get the value and remove extra space
 
+  //field cannot be empty
   if (value === "") {
-    showError(input, errorElement, `${fieldLabel} is required`)
-    return false
+    showError(input, errorElement, `${fieldLabel} is required`);
+    return false; //stop the function here
   }
 
+  //check if field only contains letters
   if (!/^[A-Za-z]+$/.test(value)) {
-    showError(input, errorElement, "Only letters allowed")
-    return false
+    showError(input, errorElement, "Only letters allowed");
+    return false;
   }
 
-  input.classList.remove("error")
-  clearError(input, errorElement)
-  input.classlist.add("valid")
-  return true
-
+  //if both if:s pass, teh field is valid
+  input.classList.remove("error");
+  clearError(input, errorElement);
+  input.classList.add("valid"); //add green border
+  return true;
 }
 
-firstName.addEventListener("input", () => {
+//run name validation while user types
+firstName.addEventListener("input", function () {
   validateName(firstName, firstNameError, "First name")
 })
 
-lastName.addEventListener("input", () => {
+lastName.addEventListener("input", function() {
   validateName(lastName, lastNameError, "Last name")
 })
-
