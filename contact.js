@@ -91,7 +91,7 @@ function validateEmail () {
   }
 
   //check if field has @
-  if (!value.includes(@)) {
+  if (!value.includes("@")) {
     showError(email, emailError, "Enter valid email")
     return false
 }
@@ -100,6 +100,8 @@ function validateEmail () {
     clearError(email, emailError)
     email.classList.add("valid")
     return ture
-
+}
     //validate email while typing
     email.addEventListener("input", validateEmail)
+
+    
