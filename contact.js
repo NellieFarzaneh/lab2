@@ -107,6 +107,21 @@ function validateEmail() {
 //validate email while typing
 email.addEventListener("input", validateEmail)
 
+//Validate subject
+function validateSubject () {
+  if (subject.value === "") {
+    showError(subject,subjectError, "Please choose a subject")
+  return false
+  }
+
+  subject.classList.remove("error")
+  clearError(subject, subjectError)
+  subject.classList.add("valid")
+  return true
+}
+subject.addEventListener("change", validateSubject)
+
+
 //Validate message
 function validateMessage() {
   const value = message.value.trim()
@@ -147,22 +162,25 @@ function clearForm() {
   //reste all input values
   contactForm.reset()
 
-  //remove borders after submit
+  //remove borders 
   firstName.classList.remove("valid", "error")
   lastName.classList.remove("valid", "error")
   email.classList.remove("valid", "error")
+  subject.classList.remove("valid", "error")
   message.classList.remove("valid", "error")
 
   //clear all error messages
   firstNameError.textContent = ""
   lastNameError.textContent = ""
   emailError.textContent = ""
+  subjectError.textContent = ""
   messageError.textContent = ""
 
   //hida all error messages
   firstNameError.classList.add("hidden")
   lastNameError.classList.add("hidden")
   emailError.classList.add("hidden")
+  subjectError.classList.add("hidden")
   messageError.classList.add("hidden")
 
   //reset charcter counter
@@ -172,8 +190,3 @@ function clearForm() {
 
 //clearForm runs whenuser clicks "clear" button
 resetBtn.addEventListener("click", clearForm)
-
-  
-  
-  
-  
