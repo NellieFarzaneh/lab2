@@ -104,4 +104,20 @@ function validateEmail () {
     //validate email while typing
     email.addEventListener("input", validateEmail)
 
-    
+
+
+    //Validate message
+    function validateMessage () = {
+    const value = message.value.trim()
+
+    //message cannot be empty
+    if (value === "") {
+      showError(message, messageError, "Message is required")
+      return false
+    }
+
+    //if message is valid
+    clearError(message, messageError)
+    message.classList.add("valid")
+    return true 
+  }
