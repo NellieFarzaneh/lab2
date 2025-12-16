@@ -36,3 +36,10 @@ function showError(input, errorElement, message) { //input = input field, errorE
   errorElement.classList.remove("hidden"); //shows messsage beneath inputfield
 }
 
+//Clear error - field is okay, remove errors 
+function clearError(input, errorElement) { //takes input = input field and errorElement = error message
+  input.classList.remove("error"); //removes red border
+  errorElement.textContent = ""; //removed text
+  errorElement.classList.add("hidden"); //hides errormessage 
+}
+
