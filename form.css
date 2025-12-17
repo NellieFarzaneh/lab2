@@ -23,6 +23,11 @@
   padding: 8px;
 }
 
+/* make character counter black as default */
+#charCounter {
+  color: black;
+}
+
 /*Styling buttons*/
 #contactForm input[type="submit"] {
     background-color: rgb(200, 180, 150);
@@ -122,8 +127,6 @@
 #contactForm {
     width: 350px;
   }
-
-
 }
 
 
