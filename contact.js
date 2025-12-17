@@ -176,7 +176,7 @@ function clearForm() {
   subjectError.textContent = ""
   messageError.textContent = ""
 
-  //hida all error messages
+  //hide all error messages
   firstNameError.classList.add("hidden")
   lastNameError.classList.add("hidden")
   emailError.classList.add("hidden")
@@ -190,3 +190,28 @@ function clearForm() {
 
 //clearForm runs whenuser clicks "clear" button
 resetBtn.addEventListener("click", clearForm)
+
+//Form submission - runs when user clicks "send"
+
+contactForm.addEventListener("submit", function(submitEvent) {
+  submitEvent.preventDefault() //prevents page reload
+
+  //validate all fields again on submit 
+  const isFirstNameValid = validateName (firstName, firstNameError, "First Name")
+  const isLastNameValid = validateName (lastName, lastNameError, "Last name")
+  const isEmailValid = validateEmail()
+  const isSubjectValid = validateSubject ()
+  const isMessageValid = validateMessage ()
+
+  //if all fields are valid
+  if (isFirstNameValid && isLastNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+    successMsg.textContent = `Thank you ${firstName.value}! I will contact you soon!`
+    successMsg.classList.add("show")
+
+    setTimeout (() => {
+      successMsg.classList.remove("show")
+      successMsg.textContent = ""
+      clearForm()
+    }, 3000)
+  }
+})
