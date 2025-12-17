@@ -176,13 +176,6 @@ function clearForm() {
   subjectError.textContent = ""
   messageError.textContent = ""
 
-  //hide all error messages
-  firstNameError.classList.add("hidden")
-  lastNameError.classList.add("hidden")
-  emailError.classList.add("hidden")
-  subjectError.classList.add("hidden")
-  messageError.classList.add("hidden")
-
   //reset charcter counter
   charCounter.textContent = "0 / 20 characters"
   charCounter.style.color = "#dc3545"
@@ -192,7 +185,6 @@ function clearForm() {
 resetBtn.addEventListener("click", clearForm)
 
 //Form submission - runs when user clicks "send"
-
 contactForm.addEventListener("submit", function(submitEvent) {
   submitEvent.preventDefault() //prevents page reload
 
@@ -212,6 +204,6 @@ contactForm.addEventListener("submit", function(submitEvent) {
       successMsg.classList.remove("show")
       successMsg.textContent = ""
       clearForm()
-    }, 3000)
+    }, 3000) //disappears after 3 seconds 
   }
 })
