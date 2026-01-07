@@ -127,10 +127,10 @@ function validateMessage() {
   const value = message.value.trim()
   const length = value.length
 
-  charCounter.textContent = length + "/ 20 characters"
+  charCounter.textContent = length + "/ 40 characters"
 
   //change colour dependning on message length
-  if (length < 20) {
+  if (length > 40) {
     charCounter.style.color = "#dc3545"//error
   } else {
     charCounter.style.color = "#28a745" //valid
@@ -142,8 +142,8 @@ function validateMessage() {
     return false
   }
   //message must be at least 20 characters
-  if (length < 20) {
-    showError(message, messageError, "Message must be at least 20 characters")
+  if (length > 40) {
+    showError(message, messageError, "Message must be at max 40 characters")
     return false
   }
 
